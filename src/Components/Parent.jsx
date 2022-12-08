@@ -1,18 +1,8 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
-
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-
-
-
-
-
 
 const UserLogin = () => {
   const [validated, setValidated] = useState(false);
@@ -35,18 +25,15 @@ const UserLogin = () => {
   };
 
   return (
-    <Container className="mt-4">
-      <Row className="mt-5">
+
+    
+    <Container >
+
+      <Row >
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="4" controlId="validationCustom01">
               <Form.Label>Request Type</Form.Label>
-
-
-
-
-
-
               <Form.Select
                 onChange={onChange}
                 aria-label="Default select example"
@@ -57,6 +44,7 @@ const UserLogin = () => {
 
                 <option value="1">Leave</option>
                 <option value="2">Salary</option>
+                <option value="2">Others</option>
               </Form.Select>
             </Form.Group>
           </Row>
@@ -78,30 +66,16 @@ const UserLogin = () => {
           <Form.Group className="mb-3">
             <Form.Check
               required
-              label="I solemnly affirm that all the details"
+              label="I solemnly affirm that all the above details are correct"
               feedback="You must agree before submitting."
               feedbackType="invalid"
             />
           </Form.Group>
-          <Button type="submit">Apply</Button>
+          {/* <Button type="submit">Apply</Button> */}
         </Form>
       </Row>
 
 
-      <Tabs
-      defaultActiveKey="profile"
-      id="justify-tab-example"
-      className="mb-3"
-      justify
-    >
-      <Tab eventKey="home" title="Pending">
-      </Tab>
-      <Tab eventKey="profile" title="Approved">       
-      </Tab>
-      <Tab eventKey="longer-tab" title="Rejected">
-      </Tab>
-  
-    </Tabs>
 
     </Container>
   );
