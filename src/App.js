@@ -1,7 +1,7 @@
 
 import React from "react";
 import Calendar from "calendar-reactjs";
-const App = () => {
+const Attendance = () => {
   return (
     <Calendar
       onCellClick={(val) => console.log(val)}
@@ -79,4 +79,4 @@ const App = () => {
     />
   );
 };
-export default App;
+export default Attendance;
