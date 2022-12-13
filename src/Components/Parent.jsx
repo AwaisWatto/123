@@ -3,6 +3,8 @@ import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
+
 
 const UserLogin = () => {
   const [validated, setValidated] = useState(false);
@@ -71,7 +73,7 @@ const UserLogin = () => {
               feedbackType="invalid"
             />
           </Form.Group>
-          {/* <Button type="submit">Apply</Button> */}
+          <Button type="submit">Apply</Button>
         </Form>
       </Row>
 
