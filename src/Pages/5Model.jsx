@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import UserLogin from "./Parent";
+
 import Col from "react-bootstrap/Col";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import RequestTable from "./RequestTable";
+import RequestTable from "./1RequestTable";
+import UserLogin from "./UserLogin";
 
 function MyModal() {
   const [show, setShow] = useState(false);
@@ -194,7 +195,7 @@ function MyModal() {
           className="mt-5"
         >
           <Tab variant="primary" eventKey="home" title="Pending">
-            <RequestTable />
+            <RequestTable/>
           </Tab>
 
           <Tab eventKey="profile" title="Approved">

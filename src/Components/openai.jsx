@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { pink } from '@mui/material/colors';
 
-function AttendanceMarker() {
+function Openai() {
   const [date, setDate] = useState(new Date());
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
@@ -12,7 +12,7 @@ function AttendanceMarker() {
 
     axios.post('/api/markAttendance', { date })
       .then(response => {
-        setIsSubmitting(true);
+        setIsSubmitting(false);
         // Do something with the response
       })
       .catch(err => {
@@ -32,4 +32,4 @@ function AttendanceMarker() {
     </div>
   );
 }
-export default AttendanceMarker
+export default Openai;

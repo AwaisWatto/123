@@ -1,35 +1,29 @@
-
 import React from "react";
-import Calendar from "calendar-reactjs";
 
-import UserLogin from "./Components/Parent";
-import AttendanceList from "./Components/User";
-import AttendanceForm from "./Components/User";
-import AttendanceMarker from "./Components/User";
-import Attendance from "./Components/openai";
+import { Routes, Route } from "react-router-dom";
 import Navbar1 from "./Components/Navbar";
-import Openai2 from "./Components/Openai2";
-import Openai3 from "./Components/Openai3";
-import Openai4 from "./Components/Openai4";
-import Openai5 from "./Components/Openai5";
+import Parent from "./Components/Parent";
+import RequestTable from "./Pages/1RequestTable";
+import UserLogin from "./Pages/2StackOver";
+import AdminPanel from "./Pages/3Openadminpanel";
+import UpdateData from "./Pages/4ai";
+import MyModal from "./Pages/5Model";
 
-const App = () => {
+function App() {
   return (
-<div>
-{/* <UserLogin/>
-<AttendanceForm /> */}
-{/* <AttendanceMarker /> */}
-<Navbar1/>
-<Attendance />
-<Openai2/>
-<Openai3/>
-<Openai4/>
-<Openai5/>
-
-</div>
-
-
+    <div>
+      <Navbar1 />
+      <Routes>
+        {/* <Route path="/" element={<Navbar1 />} /> */}
+        <Route index element={<Parent />} />
+        <Route path="requesttable" element={<RequestTable />} />
+        <Route path="About-Us" element={<UserLogin />} />
+        <Route path="Contact-US" element={<AdminPanel />} />
+        <Route path="Cart" element={< UpdateData/>} />
+        <Route path="User" element={< MyModal/>} />
+      </Routes>
+    </div>
   );
-  }
-  
+}
+
 export default App;
