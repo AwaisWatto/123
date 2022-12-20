@@ -13,8 +13,8 @@
         <tr>
           <th>#</th>
           <th>Request Type</th>
-          <th>Condition</th>
-          <th>Actions</th>
+          <th>Category</th>
+          <th>action</th>
         </tr>
       </thead>
       <tbody>
@@ -25,8 +25,6 @@
           <td>
 
           <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-          &nbsp;
-            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
           </td>
         </tr>
         <tr>
@@ -36,8 +34,6 @@
           <td>
 
           <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-          &nbsp;
-            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
           </td>
         </tr>
   

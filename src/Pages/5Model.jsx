@@ -8,6 +8,9 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import RequestTable from "./1RequestTable";
 import UserLogin from "./UserLogin";
+import RequestTable2 from "./2RequestTable";
+import RequestTable3 from "./3RequestTable";
+import './Tabs.css';
 
 function MyModal() {
   const [show, setShow] = useState(false);
@@ -190,19 +193,18 @@ function MyModal() {
         <Tabs
           defaultActiveKey="profile"
           id="justify-tab-example"
-          className="mb-3"
+          className="mb-3 mt-5"
           justify
-          className="mt-5"
         >
-          <Tab variant="primary" eventKey="home" title="Pending">
+          <Tab eventKey="profile" title="Pending">
             <RequestTable/>
           </Tab>
 
-          <Tab eventKey="profile" title="Approved">
-            <RequestTable />
+          <Tab eventKey="home" title="Approved">
+            <RequestTable2 />
           </Tab>
-          <Tab eventKey="longer-tab" title="Rejected">
-            <RequestTable />
+          <Tab eventKey="-tab" title="Rejected">
+            <RequestTable3 />
           </Tab>
         </Tabs>
       </Row>

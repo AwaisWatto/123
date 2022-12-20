@@ -46,7 +46,7 @@ const UserLogin = () => {
 
                 <option value="1">Leave</option>
                 <option value="2">Salary</option>
-                <option value="2">Others</option>
+                <option value="3">Others</option>
               </Form.Select>
             </Form.Group>
           </Row>

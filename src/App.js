@@ -8,6 +8,8 @@ import UserLogin from "./Pages/2StackOver";
 import AdminPanel from "./Pages/3Openadminpanel";
 import UpdateData from "./Pages/4ai";
 import MyModal from "./Pages/5Model";
+import MyComponent from "./Pages/Tabs";
+
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="Cart" element={< UpdateData/>} />
         <Route path="User" element={< MyModal/>} />
       </Routes>
+      <MyComponent/>
+      
     </div>
   );
 }

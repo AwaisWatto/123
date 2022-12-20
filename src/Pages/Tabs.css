@@ -1,0 +1,5 @@
+
+.nav-tabs .nav-link{
+    --bs-nav-tabs-link-active-bg: grey;
+    --bs-nav-tabs-link-active-color: white;
+}
