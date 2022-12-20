@@ -1,21 +1,42 @@
 import React from 'react'
 import AttendanceUser from './Attendance'
-import AdminLogin from './Adminlogin';
+import RequestsTabs from './Requests';
 import UserProfile from './UserPfile';
 import {Routes , Route } from "react-router-dom"; 
 import { Link } from 'react-router-dom';
+import Homepage from './Homepage';
+import { Col } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+
 
 
 function Sidebar() {
   return (
-    <div className="row mt-3">
-    <div className="col-2">
+    // <div className="row mt-2em "  style={{zIndex:'-2em'}}>
+    <Row >
+      <Col lg='2' md='10' sm='12' style={{backgroundColor:'#1976d2'}}>
+    {/* <div className="col-2" style={{backgroundColor:'#1976D2'}}> */}
       <div
         class="nav flex-column nav-pills text-center"
         id="v-pills-tab"
         role="tablist"
         aria-orientation="vertical"
       >
+        
+        <a
+          class="nav-link active"
+          id="v-pills-home-tab"
+          data-mdb-toggle="pill"
+          role="tab"
+          aria-controls="v-pills-home"
+          aria-selected="true"
+          color='black'>
+          <div className='newbar'>
+          <Link to ="/"> Homepage </Link>
+          </div>
+          </a
+        >
+        
         <a
           class="nav-link active"
           id="v-pills-home-tab"
@@ -42,7 +63,7 @@ function Sidebar() {
         >
 
         <a
-          class="nav-link"
+          class="nav-link active"
           id="Userprofile"
           data-mdb-toggle="pill"
           role="tab"
@@ -53,10 +74,23 @@ function Sidebar() {
           </div></a
         >
       </div>
-    </div>
+    {/* </div> */}
+    </Col>
   
-    <div class="Col-8 col-sm-9">
+    {/* <div class="Col-8 col-sm-9"> */}
+    <Col lg='10' sm='12' xs='9' md='12'>
       <div class="tab-content" id="v-pills-tabContent">
+      <div
+          class="tab-pane fade show active"
+          id="v-pills-home"
+          role="tabpanel"
+          aria-labelledby="v-pills-home-tab">
+            <Routes> 
+           <Route path ="/" element= {<Homepage />}/> 
+ 
+           </Routes>
+          {/* <AttendanceUser /> */}
+        </div>
         <div
           class="tab-pane fade show active"
           id="v-pills-home"
@@ -75,7 +109,7 @@ function Sidebar() {
           aria-labelledby="v-pills-profile-tab"
         >
           <Routes> 
-        <Route path ="/requests" element= {<AdminLogin />}/> 
+        <Route path ="/requests" element= {<RequestsTabs />}/> 
         </Routes>        
         </div>
         <div
@@ -88,8 +122,8 @@ function Sidebar() {
         </Routes>
         </div>
       </div>
-    </div>
-  </div>
+    </Col>
+    </Row>
   )
 }
 

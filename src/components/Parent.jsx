@@ -1,8 +1,10 @@
 import React from 'react'
-import AdminLogin from './components/Adminlogin'
-import ResponsiveAppBar from './components/Navbar'
-import Sidebar from './components/Sidebar'
+import AdminLogin from './Adminlogin'
+import ResponsiveAppBar from './Navbar'
+import Sidebar from './Sidebar'
 import { Col, Row } from 'react-bootstrap'
+
+
 
 
 function Parent() {
@@ -10,6 +12,7 @@ function Parent() {
     <div>
         <ResponsiveAppBar />
         <Sidebar />
+        
         {/* <Col style={{zIndex:'15', position:'absolute'}} md={{ span: 8, offset: 3 }}><AdminLogin /></Col> */}
         
    

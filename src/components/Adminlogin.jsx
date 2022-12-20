@@ -3,7 +3,7 @@ import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } f
 import './Adminlogin.css';
 
 
-function AdminLogin() {
+function UserLogin() {
 
   return (
     <>
@@ -25,7 +25,7 @@ function AdminLogin() {
           </div>
 
           <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0">Admin Login</p>
+            <p className="text-center fw-bold mx-3 mb-0">User Login</p>
           </div>
 
           <MDBInput wrapperClass='mb-4' label='Username ' id='formControlLg' type='Username' size="lg"/>
@@ -49,4 +49,4 @@ function AdminLogin() {
   );
 }
 
-export default AdminLogin;
+export default UserLogin;

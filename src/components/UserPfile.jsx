@@ -13,6 +13,7 @@ import {
   MDBProgress,
   MDBProgressBar,
 } from "mdb-react-ui-kit";
+import UserUpdateModalTem from "./UserUpdateModal";
 
 export default function UserProfile() {
   return (
@@ -28,7 +29,7 @@ export default function UserProfile() {
             </MDBBreadcrumb>
           </MDBCol>
         </MDBRow>
-
+    
         <MDBRow>
           <MDBCol lg="4">
             <MDBCard className="mb-4">
@@ -40,7 +41,7 @@ export default function UserProfile() {
                   style={{ width: "350px" }}
                   fluid
                 />
-                <p className="text-muted mb-1">Full Stack Developer</p>
+                <p className="text-muted mb-1">Profile Details</p>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
@@ -103,7 +104,9 @@ export default function UserProfile() {
                 </MDBRow>
               </MDBCardBody>
             </MDBCard>
-            <MDBBtn style={{ marginBottom: 30 }}>Update</MDBBtn>
+            <div className="mb-3 justify-content-center">
+            <UserUpdateModalTem />
+            </div>
             <MDBRow>
               <MDBCol md="12">
                 <MDBCard className="mb-4 mb-md-0">
