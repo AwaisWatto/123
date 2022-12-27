@@ -62,7 +62,7 @@ function Sidebar() {
           </a
         >
 
-        <a
+        <button
           class="nav-link active"
           id="Userprofile"
           data-mdb-toggle="pill"
@@ -71,7 +71,7 @@ function Sidebar() {
           aria-selected="false"
           ><div className='userprofile'>
           <Link to ="/userprofile"> User Profile </Link>
-          </div></a
+          </div></button
         >
       </div>
     {/* </div> */}

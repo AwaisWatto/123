@@ -1,6 +1,7 @@
 import React from 'react';
+import AdminAttendence from './components/AdminAttendence';
 import './App.css';
-import UserLogin from './components/Adminlogin';
+
 import Parent from './components/Parent';
 import { Footer } from './components/UserFooter'
 
@@ -13,6 +14,7 @@ function App() {
         {/* <UserLogin /> */}
           <Parent />
         <Footer />
+        <AdminAttendence/>
       </div>
     </div>
   );
